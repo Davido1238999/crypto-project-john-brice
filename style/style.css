@@ -1,0 +1,585 @@
+@import "https://unpkg.com/open-props";
+
+/* colors
+#EEEEEE
+#0F044C
+#787A91
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    background-color: #EEEEEE;
+    color: #0F044C;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    height: auto;
+    background-image: linear-gradient(40deg,
+            hsl(0deg 0% 93%) 0%,
+            hsl(344deg 0% 93%) 14%,
+            hsl(344deg 0% 93%) 27%,
+            hsl(344deg 0% 93%) 39%,
+            hsl(344deg 0% 93%) 53%,
+            hsl(344deg 0% 93%) 69%,
+            hsl(0deg 0% 93%) 100%);
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.header {
+    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+#CRYPTONITE {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 15px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0px #EEEEEE;
+    text-shadow: 1px 1px 1px #787A91;
+    transition: all 0.4s ease-in-out;
+}
+
+#CRYPTONITE:hover {
+    letter-spacing: 60px;
+
+}
+
+.arrowDown {
+    font-weight: 100;
+    font-size: 6rem;
+    text-shadow: 1px 13px 6px #0F044C;
+    animation: swing-out-top-bck 0.5s ease-in-out infinite alternate-reverse both;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 0%;
+    margin: 30px;
+    overflow-y: hidden;
+}
+
+.header h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0px #EEEEEE;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.header h2:hover {
+    letter-spacing: 15px;
+}
+
+p {
+    padding: 12px;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text-box {
+    max-width: 400px;
+    padding: 3rem;
+    background-color: #EEEEEE;
+    border-radius: 280px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px;
+
+}
+
+
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 4s all ease;
+}
+
+.reveal:hover {}
+
+.text-container {
+    color: #0F044C;
+    padding: 0px, 20px;
+    margin: 20px;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+a {
+    color: #0F044C;
+    text-decoration: none;
+}
+
+input[type=text] {
+    border: 1px solid #EEEEEE;
+    color: #0F044C;
+    text-align: left;
+    font-size: 20px;
+    background-color: #EEEEEE;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    direction: ltr;
+    margin-bottom: 50px;
+    padding: 12px 20px 12px 40px;
+    border: none;
+    outline: 0;
+}
+
+input::placeholder {
+    color: #0F044C;
+    opacity: 0.6;
+    text-align: center;
+
+}
+
+#searchCoins {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #0F044C;
+
+}
+
+.searchIcon {
+    position: absolute;
+    left: 100px;
+}
+
+#page1 {
+    display: flex;
+    width: 100%;
+    /* Full height */
+    height: 100%;
+    margin-top: 20px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+
+
+
+}
+
+.searchIcon input[type=search] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #787A91;
+    float: left;
+    width: 100%;
+    background: #EEEEEE;
+
+}
+
+.searchIcon input[type=search]:focus {
+    outline: none;
+
+}
+
+.searchIcon::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+}
+
+img:hover {}
+
+.text-box:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.cards {
+    margin-top: 100px;
+}
+
+.card {
+    width: 350px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #EEEEEE;
+    background-color: #EEEEEE;
+    color: #0F044C;
+    /* cursor: pointer; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.card:hover {
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.img-name {
+    width: 100%;
+    /* height: 210px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -75px;
+    border-bottom: 5px solid #0F044C;
+}
+
+.img-name img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 80px;
+    border: 5px solid #0f044c0c;
+    background-color: #EEEEEE;
+}
+
+.img-name h2 {
+    text-align: center;
+    padding: 16px;
+}
+
+.tokenName {
+    height: 140px;
+    padding-top: 50px;
+}
+
+.tokenName h3 {
+    text-align: center;
+}
+
+.forMore {
+    height: 100px;
+}
+
+.forMore button {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    background-color: #EEEEEE;
+    border: 3px solid #0F044C;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.forMore button:hover {
+    background-color: #0F044C;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+.card {
+    display: inline-block;
+    margin: 35px;
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    background-color: #0f044c0e;
+    color: #EEEEEE;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 10px #0f044c6b;
+}
+
+nav a {
+    color: #0F044C;
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #0F044C;
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-radius: 10%;
+}
+
+#menu {
+    display: block;
+    justify-content: left;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#coinId{
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.searchIcon {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+/* loading */
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('pageLoader2.gif') 50% 50% no-repeat #EEEEEE;
+    opacity: .8;
+}
+
+.loading-wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background-color: #EEEEEE;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #0F044C;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+
+/* toggle btn */
+.switch {
+    position: relative;
+    margin-top: 10px;
+    margin-right: 100%;
+    margin-left: auto;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EEEEEE;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #0F044C;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #0F044C;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* Animations */
+/* ¯\_(ツ)_/¯ */
+
+/* body load animation */
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* arrowFlicker */
+@keyframes swing-out-top-bck {
+    0% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+}
+
+/* card hover animation */
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: translateZ(50px);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
